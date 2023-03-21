@@ -1,0 +1,14 @@
+.titulo{
+    text-align: center;
+    color: rgb(122, 216, 149);
+}
+
+.regresar_btn{
+    height: 2.5rem;
+    width: 7rem;
+    
+}
+
+.table-responsive{
+    margin: 30px;
+}

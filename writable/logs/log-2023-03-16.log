@@ -1,0 +1,47 @@
+CRITICAL - 2023-03-16 14:48:53 --> Undefined variable $datos
+in APPPATH\Views\paises\eliminados.php on line 35.
+ 1 APPPATH\Views\paises\eliminados.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Views\\paises\\eliminados.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('paises/eliminados', [], true)
+ 5 APPPATH\Controllers\Paises.php(70): view('paises/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 14:49:12 --> Undefined variable $datos
+in APPPATH\Views\paises\eliminados.php on line 35.
+ 1 APPPATH\Views\paises\eliminados.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Views\\paises\\eliminados.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('paises/eliminados', [], true)
+ 5 APPPATH\Controllers\Paises.php(70): view('paises/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 14:49:15 --> Undefined variable $datos
+in APPPATH\Views\paises\eliminados.php on line 35.
+ 1 APPPATH\Views\paises\eliminados.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Views\\paises\\eliminados.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('paises/eliminados', [], true)
+ 5 APPPATH\Controllers\Paises.php(70): view('paises/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 15:16:12 --> Call to undefined method App\Models\PaisesModel::elimina_Pais
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Paises.php(75): CodeIgniter\Model->__call('elimina_Pais', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->eliminar('6', 'E')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 15:16:17 --> Call to undefined method App\Models\PaisesModel::elimina_Pais
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Paises.php(75): CodeIgniter\Model->__call('elimina_Pais', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->eliminar('6', 'E')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

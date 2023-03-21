@@ -1,0 +1,864 @@
+ERROR - 2023-03-13 00:01:05 --> mysqli_sql_exception: Table 'bd_taller.pais' doesn't exist in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 00:01:05 --> Table 'bd_taller.pais' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `pais`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `pais` ON `pais`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:15:49 --> Class "App\Models\CargosModel" not found
+in APPPATH\Controllers\Cargos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\cargos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:15:54 --> Class "App\Models\CargosModel" not found
+in APPPATH\Controllers\Cargos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\cargos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:32:15 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:34:30 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:34:31 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:34:31 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:34:31 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:34:32 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:34:36 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:35:04 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:35:04 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:35:04 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:35:05 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:35:05 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:35:05 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:35:07 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:15 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:15 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:15 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:15 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:20 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:20 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:20 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:20 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:51 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:37:55 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:41:50 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:41:50 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:41:50 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:41:50 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:41:51 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:41:51 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:42:01 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:42:01 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 00:42:01 --> Class "App\Models\EmpleadosModel" not found
+in APPPATH\Controllers\Empleados.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Empleados->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 13:52:29 --> Undefined array key "codigo"
+in APPPATH\Views\paises\paises.php on line 30.
+ 1 APPPATH\Views\paises\paises.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'APPPATH\\Views\\paises\\paises.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\paises.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/paises/paises', [], true)
+ 5 APPPATH\Controllers\Paises.php(19): view('/paises/paises', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 13:52:31 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 13:52:31 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 13:54:38 --> Undefined array key "codigo"
+in APPPATH\Views\paises\paises.php on line 30.
+ 1 APPPATH\Views\paises\paises.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'APPPATH\\Views\\paises\\paises.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\paises.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/paises/paises', [], true)
+ 5 APPPATH\Controllers\Paises.php(19): view('/paises/paises', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 13:54:39 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 13:54:39 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 13:56:09 --> Undefined array key "nombre"
+in APPPATH\Views\paises\paises.php on line 31.
+ 1 APPPATH\Views\paises\paises.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\paises\\paises.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\paises.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/paises/paises', [], true)
+ 5 APPPATH\Controllers\Paises.php(19): view('/paises/paises', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 13:57:05 --> Undefined array key "nombre"
+in APPPATH\Views\paises\paises.php on line 31.
+ 1 APPPATH\Views\paises\paises.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\paises\\paises.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\paises.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/paises/paises', [], true)
+ 5 APPPATH\Controllers\Paises.php(19): view('/paises/paises', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 13:59:44 --> Undefined array key "nombre"
+in APPPATH\Views\paises\paises.php on line 31.
+ 1 APPPATH\Views\paises\paises.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\paises\\paises.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\paises.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/paises/paises', [], true)
+ 5 APPPATH\Controllers\Paises.php(19): view('/paises/paises', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 13:59:46 --> Undefined array key "nombre"
+in APPPATH\Views\paises\paises.php on line 31.
+ 1 APPPATH\Views\paises\paises.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\paises\\paises.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\paises.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/paises/paises', [], true)
+ 5 APPPATH\Controllers\Paises.php(19): view('/paises/paises', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:01:05 --> Undefined array key "nombre"
+in APPPATH\Views\paises\paises.php on line 31.
+ 1 APPPATH\Views\paises\paises.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\paises\\paises.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\paises.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/paises/paises', [], true)
+ 5 APPPATH\Controllers\Paises.php(19): view('/paises/paises', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:01:07 --> Undefined array key "nombre"
+in APPPATH\Views\paises\paises.php on line 31.
+ 1 APPPATH\Views\paises\paises.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\paises\\paises.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paises\\paises.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/paises/paises', [], true)
+ 5 APPPATH\Controllers\Paises.php(19): view('/paises/paises', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 14:09:59 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 14:09:59 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 14:20:07 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 14:20:07 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 14:30:16 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 14:30:16 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 14:30:20 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 14:30:20 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 14:30:32 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 14:30:32 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:31:44 --> Undefined array key "nombre_pais"
+in APPPATH\Views\departamentos\departamentos.php on line 30.
+ 1 APPPATH\Views\departamentos\departamentos.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_pais"', 'APPPATH\\Views\\departamentos\\departamentos.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\departamentos\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/departamentos/departamentos', [], true)
+ 5 APPPATH\Controllers\Departamentos.php(19): view('/departamentos/departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:31:51 --> Undefined array key "nombre_pais"
+in APPPATH\Views\departamentos\departamentos.php on line 30.
+ 1 APPPATH\Views\departamentos\departamentos.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_pais"', 'APPPATH\\Views\\departamentos\\departamentos.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\departamentos\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/departamentos/departamentos', [], true)
+ 5 APPPATH\Controllers\Departamentos.php(19): view('/departamentos/departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:33:26 --> Undefined array key "nombre_pais"
+in APPPATH\Views\departamentos\departamentos.php on line 30.
+ 1 APPPATH\Views\departamentos\departamentos.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_pais"', 'APPPATH\\Views\\departamentos\\departamentos.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\departamentos\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/departamentos/departamentos', [], true)
+ 5 APPPATH\Controllers\Departamentos.php(19): view('/departamentos/departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:33:29 --> Undefined array key "nombre_pais"
+in APPPATH\Views\departamentos\departamentos.php on line 30.
+ 1 APPPATH\Views\departamentos\departamentos.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_pais"', 'APPPATH\\Views\\departamentos\\departamentos.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\departamentos\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/departamentos/departamentos', [], true)
+ 5 APPPATH\Controllers\Departamentos.php(19): view('/departamentos/departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:33:31 --> Undefined array key "nombre_pais"
+in APPPATH\Views\departamentos\departamentos.php on line 30.
+ 1 APPPATH\Views\departamentos\departamentos.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_pais"', 'APPPATH\\Views\\departamentos\\departamentos.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\departamentos\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/departamentos/departamentos', [], true)
+ 5 APPPATH\Controllers\Departamentos.php(19): view('/departamentos/departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:34:22 --> Undefined array key "nombre_pais"
+in APPPATH\Views\departamentos\departamentos.php on line 30.
+ 1 APPPATH\Views\departamentos\departamentos.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_pais"', 'APPPATH\\Views\\departamentos\\departamentos.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\departamentos\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/departamentos/departamentos', [], true)
+ 5 APPPATH\Controllers\Departamentos.php(19): view('/departamentos/departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 14:36:21 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 14:36:21 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:36:31 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:36:36 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:47:31 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 14:48:53 --> Undefined array key "nombre_pais"
+in APPPATH\Views\departamentos\departamentos.php on line 30.
+ 1 APPPATH\Views\departamentos\departamentos.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_pais"', 'APPPATH\\Views\\departamentos\\departamentos.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\departamentos\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/departamentos/departamentos', [], true)
+ 5 APPPATH\Controllers\Departamentos.php(19): view('/departamentos/departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:05:46 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:07:35 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:07:41 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:08:40 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:10:18 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:10:22 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:10:22 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:10:22 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:10:23 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:10:23 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:10:23 --> Call to undefined method App\Models\DepartamentosModel::obtenerDepartamento
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Departamentos.php(16): CodeIgniter\Model->__call('obtenerDepartamento', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:10:36 --> Undefined variable $departamentos
+in APPPATH\Controllers\Departamentos.php on line 17.
+ 1 APPPATH\Controllers\Departamentos.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'APPPATH\\Controllers\\Departamentos.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 15:15:23 --> Array to string conversion
+in APPPATH\Controllers\Departamentos.php on line 17.
+ 1 APPPATH\Controllers\Departamentos.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Departamentos.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 15:17:33 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 15:17:33 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 15:17:58 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 15:17:58 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 15:17:59 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 15:17:59 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 15:17:59 --> mysqli_sql_exception: Unknown column 'paises.nombre' in 'field list' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `departa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-13 15:17:59 --> Unknown column 'paises.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.*, `paises`.`nombre` as `nombre_pais`
+FROM `departamentos`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+WHERE `departamentos`.`estado` = :departamentos.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DepartamentosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Departamentos.php(16): App\Models\DepartamentosModel->obtenerDepartamentos()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Departamentos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Departamentos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
