@@ -19,9 +19,12 @@
                             <th>Id</th>
                             <th>Nombres</th>
                             <th>Apellidos</th>
+                            <th>Pais</th>
+                            <th>Departmanto</th>
                             <th>Municipio</th>
                             <th>Nacimiento</th>
                             <th>Cargo</th>
+                            <th>Salario</th>
                             <th>Estado</th>
                             <th colspan="2">Acciones</th>
                         </tr>
@@ -32,9 +35,12 @@
                               <td><?php echo $dato ['id'];?></td>
                               <td><?php echo $dato ['nombres'];?></td>
                               <td><?php echo $dato ['apellidos'];?></td>
+                              <td><?php echo $dato ['nombrePais'];?></td>
+                              <td><?php echo $dato ['nombre_dpto'];?></td>
                               <td><?php echo $dato ['nombreMuni'];?></td>
                               <td><?php echo $dato ['nacimiento'];?></td>
                               <td><?php echo $dato ['nombreCargo'];?></td>
+                              <td><?php echo $dato ['salario'];?></td>
                               <td><?php echo $dato ['estado'];?></td>
                               <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarEmpleados" onclick="seleccionaEmpleado(<?php echo $dato['id'] . ',' . 2 ?>);">editar</button>
                                   <button type="button" class="btn btn-secondary"  href="#" data-href="<?php echo base_url('/empleados/eliminar') . '/' .$dato['id']. '/' .'E'; ?>"  data-bs-toggle="modal" data-bs-target="#modal-confirma">Eliminar</button></td>
@@ -67,6 +73,24 @@
             <input type="text" name="apellido" id="apellido" class="form-control" id="message-text">
           </div>
           <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Pais :</label>
+            <select name="paiselect"  id="paiselect" class="form-select">
+              <option id="pais">Seleccionar Pais</option>
+              <?php foreach ($paises as $dato) { ?>
+                <option value="<?php echo $dato['id']; ?>"><?php echo $dato['nombres']; ?></option>
+              <?php } ?>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Departamento:</label>
+            <select name="dpto" id="dpto" class="form-select">
+              <option selected>Seleccionar Departamento</option>
+              <?php foreach ($departamentos as $dato) { ?>
+                <option value="<?php echo $dato['id']; ?>"><?php echo $dato['nombre']; ?></option>
+              <?php } ?>
+            </select>
+          </div>
+          <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Municipio:</label>
             <select name="muni" id="muni" class="form-select">
               <option selected>Seleccionar Municipio</option>
@@ -88,6 +112,10 @@
               <?php } ?>
             </select>
           </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Salario:</label>
+            <input type="text" name="salario" id="salario" class="form-control" id="message-text">
+          </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -100,6 +128,7 @@
 </form>
 
 <script>
+
   function seleccionaEmpleado(id, tp) {
 
     if (tp == 2) {
@@ -110,13 +139,16 @@
         type: "POST",
         url: dataURL,
         dataType: "json",
-        success: function(rs) {      
+        success: function(rs) {  
           $("#tp").val(2);  
           $("#id").val(id);  
           $("#nombre").val(rs[0]['nombres']);
           $("#apellido").val(rs[0]['apellidos']);
+          $("#pais").val(rs[0]['id_pais']);
+          $("#pais").text(rs[0]['nombre_pais']);
           $("#muni").val(rs[0]['id_municipio']);
           $("#nacimiento").val(rs[0]['nacimiento']);
+          $("#salario").val(rs[0]['salario']);
           $("#cargo").val(rs[0]['id_cargo']);
           $("#btn_Guardar").text('Actualizar');
           $("#titulo").text('Editar Empleado');

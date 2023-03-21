@@ -24,26 +24,32 @@
         <table class="table table-bordered table-sm table-striped" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr style="color:#98040a;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
-               <th>Id</th>
-               <th>Nombres</th>
-               <th>Apellidos</th>
-               <th>Municipio</th>
-               <th>Nacimiento</th>
-               <th>Cargo</th>
-               <th>Estado</th>
+              <th>Id</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Pais</th>
+              <th>Departmanto</th>
+              <th>Municipio</th>
+              <th>Nacimiento</th>
+              <th>Cargo</th>
+              <th>Salario</th>
+              <th>Estado</th>
               <th></th>
             </tr>
           </thead>
           <tbody style="font-family:Arial;font-size:12px;">
             <?php foreach ($empleados as $dato) { ?>
               <tr>
-                  <td><?php echo $dato ['id'];?></td>
-                  <td><?php echo $dato ['nombres'];?></td>
-                  <td><?php echo $dato ['apellidos'];?></td>
-                  <td><?php echo $dato ['nombreMuni'];?></td>
-                  <td><?php echo $dato ['nacimiento'];?></td>
-                  <td><?php echo $dato ['nombreCargo'];?></td>
-                  <td><?php echo $dato ['estado'];?></td>
+                <td><?php echo $dato ['id'];?></td>
+                <td><?php echo $dato ['nombres'];?></td>
+                <td><?php echo $dato ['apellidos'];?></td>
+                <td><?php echo $dato ['nombrePais'];?></td>
+                <td><?php echo $dato ['nombre_dpto'];?></td>
+                <td><?php echo $dato ['nombreMuni'];?></td>
+                <td><?php echo $dato ['nacimiento'];?></td>
+                <td><?php echo $dato ['nombreCargo'];?></td>
+                <td><?php echo $dato ['salario'];?></td>
+                <td><?php echo $dato ['estado'];?></td>
 
                  <td><button type="button" class="btn btn-secondary"  href="#" data-href="<?php echo base_url('/empleados/eliminar') . '/' .$dato['id']. '/' .'A'; ?>"  data-bs-toggle="modal" data-bs-target="#modal-confirma">Activar</button></td>
 

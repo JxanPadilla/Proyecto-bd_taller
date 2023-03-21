@@ -29,7 +29,17 @@ class Municipios extends BaseController
             //echo view('/principal/principal',$data); //mostramos la vista desde el controlador y le enviamos la data necesaria, en este caso, estamos enviando el titulo
         }    
 
-        public function buscar_Municipios($id)
+        public function buscar_dptoPais($id)
+    {
+        $returnData = array();
+        $departamentoss = $this->departamentos->traer_dptoPais($id);
+        if (!empty($departamentoss)) {
+            array_push($returnData, $departamentoss);
+        }
+        echo json_encode($departamentoss);
+    }
+
+    public function buscar_Municipios($id)
     {
         $returnData = array();
         $municipios_ = $this->municipios->traer_Municipios($id);
@@ -46,13 +56,11 @@ class Municipios extends BaseController
             if ($tp == 1) {
                 $this->municipios->save([
                     'id_dpto' => $this->request->getPost('dpto'),
-                    'id_pais' => $this->request->getPost('pais'),
                     'nombre' => $this->request->getPost('nombre')
                 ]);
             } else {
                 $this->municipios->update($this->request->getPost('id'),[         
                     'id_dpto' => $this->request->getPost('dpto'),
-                    'id_pais' => $this->request->getPost('pais'), 
                     'nombre' => $this->request->getPost('nombre')
                 ]);
 

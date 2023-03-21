@@ -54,8 +54,8 @@
         <form>
         <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Pais :</label>
-            <select name="pais"  id="pais" class="form-select">
-              <option selected>Seleccionar Pais</option>
+            <select name="paiselect"  id="paiselect" class="form-select">
+              <option id="pais">Seleccionar Pais</option>
               <?php foreach ($paises as $dato) { ?>
                 <option value="<?php echo $dato['id']; ?>"><?php echo $dato['nombres']; ?></option>
               <?php } ?>
@@ -88,8 +88,30 @@
 </form>
 
 <script>
-  function seleccionaMunicipio(id, tp) {
 
+
+  $('#paiselect').on('change', () => {
+    pais = $('#paiselect').val()
+    $.ajax({
+      url: "<?php echo base_url('/municipios/buscar_dptoPais'); ?>" + "/" + pais,
+      type: 'POST',
+      dataType: 'json',
+      success: function(res) {
+        var obtener 
+        obtener = `<option selected>Seleccionar Departamento</option>`
+        for (let i=0; i < res.length; i++) {
+          obtener += `<option value='${res[i].id}'>${res[i].nombre}</option>`
+        }
+        obtener += `</select>`
+        $('#dpto').html(obtener)
+      }
+    })
+  })
+
+  
+  
+  function seleccionaMunicipio(id, tp) {
+    
     if (tp == 2) {
       dataURL = "<?php echo base_url('/municipios/buscar_Municipios'); ?>" + "/" + id;
       $.ajax({
@@ -100,6 +122,7 @@
           $("#tp").val(2);  
           $("#id").val(id);  
           $("#pais").val(rs[0]['id_pais']);
+          $("#pais").text(rs[0]['nombre_pais']);
           $("#dpto").val(rs[0]['id_dpto']);
           $("#nombre").val(rs[0]['nombre']);
           $("#btn_Guardar").text('Actualizar');
@@ -112,21 +135,22 @@
       $("#nombre").val('');
       $("#btn_Guardar").text('Guardar');
       $("#titulo").text('Agregar Municipio');
-         }
-
+    }
+    
   };
-</script>
 
+  </script>
+  
 <!-- Modal Confirma Eliminar -->
 
 <div class="modal fade" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div style="background: linear-gradient(90deg, #838da0, #b4c1d9);" class="modal-content">
-                <div style="text-align:center;" class="modal-header">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div style="background: linear-gradient(90deg, #838da0, #b4c1d9);" class="modal-content">
+<div style="text-align:center;" class="modal-header">
                     <h5 style="color:#98040a;font-size:20px;font-weight:bold;" class="modal-title" id="exampleModalLabel">Eliminación de Registro</h5>
-                   
-                </div>
-                <div style="text-align:center;font-weight:bold;" class="modal-body">
+                    
+                    </div>
+                    <div style="text-align:center;font-weight:bold;" class="modal-body">
                     <p>Seguro Desea Eliminar éste Registro?</p>
                     <!-- <input hidden  id="estado" name="estado"></>
                     <input hidden id="id" name="id"></> -->

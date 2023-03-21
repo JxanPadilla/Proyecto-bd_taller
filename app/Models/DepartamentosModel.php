@@ -40,6 +40,14 @@ class DepartamentosModel extends Model{
          return $datos;
      }
 
+    public function traer_dptoPais($id){
+        $this->select('departamentos.*');
+        $this->where('id_pais', $id);
+        $this->where('estado', 'A');
+        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+        return $datos;
+    }
+
      public function elimina_Departamentos($id,$estado){
         $datos = $this->update($id, ['estado' => $estado]);        
         return $datos;
