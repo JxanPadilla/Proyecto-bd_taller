@@ -69,7 +69,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn_Guardar" id="btn_Guardar">Guardar</button>
+        <button type="submit" class="btn btn-primary" id="btn_Guardar">Guardar</button>
       </div>
     </div>
   </div>

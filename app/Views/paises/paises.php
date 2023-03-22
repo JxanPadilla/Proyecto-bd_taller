@@ -52,7 +52,7 @@
             <form>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Codigo:</label>
-                <input type="number" name="codigo" class="form-control" id="codigo">
+                <input type="text" maxlength="3" name="codigo" class="form-control" id="codigo">
                 <input hidden  id="tp" name="tp"></>
                 <input hidden id="id" name="id"></>
               </div>
@@ -129,5 +129,6 @@
            $('#modal-confirma').on('show.bs.modal', function(e) {
              $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
            });
+        </script>
 
 </body>

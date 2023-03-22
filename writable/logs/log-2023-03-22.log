@@ -1,0 +1,484 @@
+ERROR - 2023-03-22 14:04:41 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_taller`.`salarios`, CONSTRAINT `salarios_ibfk_1` FOREIGN KEY (`id_empleado`) REFERENCES `empleados` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\proyecto\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\proyecto\app\Models\SalariosModel.php(39): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\proyecto\app\Controllers\Empleados.php(93): App\Models\SalariosModel->guardar('2000', '2003', 0)
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+#11 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+#12 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-22 14:04:41 --> Cannot add or update a child row: a foreign key constraint fails (`bd_taller`.`salarios`, CONSTRAINT `salarios_ibfk_1` FOREIGN KEY (`id_empleado`) REFERENCES `empleados` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `salarios` (`id_empleado`, `sueldo`, `periodo`, `fecha_crea`) VALUES (:id_empleado:, :sueldo:, :periodo:, :fecha_crea:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Models\SalariosModel.php(39): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Empleados.php(93): App\Models\SalariosModel->guardar('2000', '2003', 0)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-22 14:04:53 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_taller`.`salarios`, CONSTRAINT `salarios_ibfk_1` FOREIGN KEY (`id_empleado`) REFERENCES `empleados` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\proyecto\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\proyecto\app\Models\SalariosModel.php(39): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\proyecto\app\Controllers\Empleados.php(93): App\Models\SalariosModel->guardar('2000', '2003', 0)
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+#11 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+#12 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-22 14:04:53 --> Cannot add or update a child row: a foreign key constraint fails (`bd_taller`.`salarios`, CONSTRAINT `salarios_ibfk_1` FOREIGN KEY (`id_empleado`) REFERENCES `empleados` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `salarios` (`id_empleado`, `sueldo`, `periodo`, `fecha_crea`) VALUES (:id_empleado:, :sueldo:, :periodo:, :fecha_crea:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Models\SalariosModel.php(39): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Empleados.php(93): App\Models\SalariosModel->guardar('2000', '2003', 0)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:13:18 --> Call to undefined method App\Models\EmpleadosModel::getPost
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Empleados.php(89): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:13:55 --> Call to undefined method App\Models\EmpleadosModel::getPost
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Empleados.php(89): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:13:56 --> Call to undefined method App\Models\EmpleadosModel::getPost
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Empleados.php(89): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:13:56 --> Call to undefined method App\Models\EmpleadosModel::getPost
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Empleados.php(89): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:13:56 --> Call to undefined method App\Models\EmpleadosModel::getPost
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Empleados.php(89): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:13:57 --> Call to undefined method App\Models\EmpleadosModel::getPost
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Empleados.php(89): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:13:57 --> Call to undefined method App\Models\EmpleadosModel::getPost
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Empleados.php(89): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:15:47 --> Call to undefined method App\Models\EmpleadosModel::getPost
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Empleados.php(89): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:16:49 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:16:51 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:16:51 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:16:51 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:16:51 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:16:51 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:18:00 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(48): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:18:01 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(48): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:18:43 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(48): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:18:44 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\SalariosModel.php(48): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:21:06 --> Call to a member function getPost() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:21:34 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:21:35 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:21:35 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:21:35 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:23:35 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:23:36 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:23:37 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:23:37 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:23:37 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:23:37 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 14:23:37 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:06:24 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:06:24 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:06:25 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:06:25 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:07:06 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:07:06 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:07:06 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:07:07 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:07:07 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('30000', '1985', '7')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:08:09 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizar('2133.00', 'ROOTPATH\\public', '8')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:08:34 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(92): App\Models\SalariosModel->actualizar('2133.00', 'ROOTPATH\\public', '8')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-22 15:08:47 --> Call to a member function update() on null
+in APPPATH\Models\SalariosModel.php on line 48.
+ 1 APPPATH\Controllers\Empleados.php(92): App\Models\SalariosModel->actualizar('213123.00', '1233', '8')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-22 15:44:12 --> mysqli_sql_exception: Unknown column 'departamentos.id_pais' in 'on clause' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `municip...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `municip...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `municip...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `municip...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\MunicipiosModel.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Municipios.php(74): App\Models\MunicipiosModel->eliminados_municipios()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Municipios->eliminados()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-22 15:44:12 --> Unknown column 'departamentos.id_pais' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `municipios`.*, `paises`.`nombres` as `nombre_pais`, `departamentos`.`nombre` as `nombre_dpto`
+FROM `municipios`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+JOIN `departamentos` ON `departamentos`.`id` = `municipios`.`id_dpto`
+WHERE `municipios`.`estado` = :municipios.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(56): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Municipios.php(74): App\Models\MunicipiosModel->eliminados_municipios()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Municipios->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-22 15:44:16 --> mysqli_sql_exception: Unknown column 'departamentos.id_pais' in 'on clause' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `municip...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `municip...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `municip...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `municip...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\MunicipiosModel.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Municipios.php(74): App\Models\MunicipiosModel->eliminados_municipios()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Municipios->eliminados()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-22 15:44:16 --> Unknown column 'departamentos.id_pais' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `municipios`.*, `paises`.`nombres` as `nombre_pais`, `departamentos`.`nombre` as `nombre_dpto`
+FROM `municipios`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+JOIN `departamentos` ON `departamentos`.`id` = `municipios`.`id_dpto`
+WHERE `municipios`.`estado` = :municipios.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(56): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Municipios.php(74): App\Models\MunicipiosModel->eliminados_municipios()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Municipios->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-22 15:46:07 --> mysqli_sql_exception: Unknown column 'departamentos.id_pais' in 'on clause' in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `municip...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `municip...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `municip...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `municip...', Array, false)
+#4 C:\xampp\htdocs\proyecto\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\proyecto\app\Models\MunicipiosModel.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\proyecto\app\Controllers\Municipios.php(74): App\Models\MunicipiosModel->eliminados_municipios()
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(934): App\Controllers\Municipios->eliminados()
+#9 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+#10 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-22 15:46:07 --> Unknown column 'departamentos.id_pais' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `municipios`.*, `paises`.`nombres` as `nombre_pais`, `departamentos`.`nombre` as `nombre_dpto`
+FROM `municipios`
+JOIN `paises` ON `paises`.`id` = `departamentos`.`id_pais`
+JOIN `departamentos` ON `departamentos`.`id` = `municipios`.`id_dpto`
+WHERE `municipios`.`estado` = :municipios.estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(56): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Municipios.php(74): App\Models\MunicipiosModel->eliminados_municipios()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Municipios->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

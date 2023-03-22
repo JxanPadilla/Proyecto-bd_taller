@@ -27,16 +27,24 @@ class MunicipiosModel extends Model{
     public function traer_Municipios($id){
         $this->select('municipios.*,departamentos.nombre as nombre_dpto, paises.nombres as nombre_pais, paises.id as id_pais');
         $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
-        $this->join('paises', 'paises.id = departamentos.id_pais');   
+        $this->join('paises', 'paises.id = departamentos.id_pais');  
         $this->where('municipios.id', $id);
         $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
+        return $datos;
+    }
+
+    public function traer_paisMuni($id){
+        $this->select('municipios.*');
+        $this->where('id_dpto', $id);
+        $this->where('estado', 'A');
+        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
     }
 
     public function obtenerMunicipios(){
         $this->select('municipios.*,departamentos.nombre as nombre_dpto, paises.nombres as nombre_pais');
         $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
-        $this->join('paises', 'paises.id = departamentos.id_pais');
+        $this->join('paises', 'paises.id = departamentos.id_pais');  
         $this->where('municipios.estado', 'A');
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
@@ -50,8 +58,8 @@ class MunicipiosModel extends Model{
  
     public function eliminados_municipios(){
         $this->select('municipios.*,paises.nombres as nombre_pais, departamentos.nombre as nombre_dpto ');
-        $this->join('paises', 'paises.id = departamentos.id_pais');
         $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
+        $this->join('paises', 'paises.id = departamentos.id_pais');  
         $this->where('municipios.estado', 'E');
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;

@@ -26,7 +26,7 @@ class EmpleadosModel extends Model{
 
 
     public function traer_Empleados($id){
-        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo,departamentos.nombre as nombre_dpto, paises.nombres as nombrePais, salarios.sueldo as salario');
+        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo,departamentos.id as id_dpto, paises.id as id_Pais, salarios.sueldo as salario, salarios.id as id_salario, salarios.periodo as periodo');
         $this->join('municipios', 'municipios.id = empleados.id_municipio');
         $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
         $this->join('paises', 'paises.id = departamentos.id_pais');
@@ -38,7 +38,7 @@ class EmpleadosModel extends Model{
     }
 
     public function obtenerEmpleados(){
-        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, departamentos.nombre as nombre_dpto, paises.nombres as nombrePais, salarios.sueldo as salario');
+        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, departamentos.nombre as nombre_dpto, paises.nombres as nombrePais, salarios.sueldo as salario, salarios.id as id_salario, salarios.periodo as periodo');
         $this->join('municipios', 'municipios.id = empleados.id_municipio');
         $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
         $this->join('paises', 'paises.id = departamentos.id_pais');
@@ -57,7 +57,7 @@ class EmpleadosModel extends Model{
     }
  
     public function eliminados_empleados(){
-        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, departamentos.nombre as nombre_dpto, paises.nombres as nombrePais, salarios.sueldo as salario');
+        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, departamentos.nombre as nombre_dpto, paises.nombres as nombrePais, salarios.sueldo as salario, salarios.id as id_salario, salarios.periodo as periodo');
         $this->join('municipios', 'municipios.id = empleados.id_municipio');
         $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
         $this->join('paises', 'paises.id = departamentos.id_pais');
