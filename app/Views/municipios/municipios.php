@@ -133,6 +133,8 @@
     }else {
       $("#tp").val(1);
       $("#nombre").val('');
+      $("#pais").text('Seleccionar Pais');
+      $("#dpto").val('Seleccionar Departamento');
       $("#btn_Guardar").text('Guardar');
       $("#titulo").text('Agregar Municipio');
     }
